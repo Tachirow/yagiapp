@@ -1,5 +1,7 @@
-<h1>YonezawaLesson1#index</h1>
-<p>Find me in app/views/yonezawa_lesson1/index.html.erb</p>
-<% form_tag(:controller => yonezawa_lesson1, :action => create) %>
-  <%= submit_tag "作成" %>
+<h1>YonezawaLesson1</h1>
+<p>摂氏・華氏計算プログラム</p>
+
+<%= form_tag('/yonezawa_lesson1') do %>
+  <div>摂氏<%= text_field :title, class: "hogehoge" %>　<%= submit_tag "華氏→" %></div>
+  <div>華氏<%= text_field :title, class: "hogehoge" %>　<%= submit_tag "摂氏→" %></div>
 <% end %>
