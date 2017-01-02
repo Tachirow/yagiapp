@@ -1,7 +1,9 @@
 <h1>YonezawaLesson1</h1>
-<p>摂氏・華氏計算プログラム</p>
+<p>摂氏・華氏計算プログラム<%= @v %></p>
 
-<%= form_tag('/yonezawa_lesson1') do %>
-  <div>摂氏<%= text_field :title, class: "hogehoge" %>　<%= submit_tag "華氏→" %></div>
-  <div>華氏<%= text_field :title, class: "hogehoge" %>　<%= submit_tag "摂氏→" %></div>
+<%= form_tag('/yonezawa_lesson1/calc_f') do %>
+  <div>摂氏<%= text_field :title, "", class: "hogehoge", name: "seshi", value: @seshi%>　<%= submit_tag "華氏→" %> 結果<%= @result_f %>度</div>
+<% end %>
+<%= form_tag('/yonezawa_lesson1/calc_c') do %>
+  <div>華氏<%= text_field :title, "", class: "hogehoge", name: "kashi", value: @kashi%>　<%= submit_tag "摂氏→" %> 結果<%= @result_c %>度</div>
 <% end %>

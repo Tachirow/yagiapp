@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   get 'yonezawa_lesson1/index'
+  root 'yonezawa_lesson1#index'
 
   get 'yonezawa_lesson1/show'
+
+  post 'yonezawa_lesson1/calc_f'
+  get 'yonezawa_lesson1/calc_f'
+  post 'yonezawa_lesson1/calc_c'
+  get 'yonezawa_lesson1/calc_c'
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
